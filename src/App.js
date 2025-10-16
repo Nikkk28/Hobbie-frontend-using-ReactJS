@@ -21,6 +21,7 @@ import EditBusinessProfile from "./components/root/users/business/AccountBusines
 import UpdateOffer from "./components/root/users/business/Offer/UpdateOffer";
 import PasswordChange from "./components/root/users/login/forgottenPassword/PasswordChange";
 import SetUpNewPassword from "./components/root/users/login/forgottenPassword/SetUpNewPassword";
+import OAuth2RedirectHandler from "./components/root/users/login/OAuth2RedirectHandler";
 
 function App() {
   return (
@@ -35,6 +36,7 @@ function App() {
             <Route path="/login" element={<Login />} />
             <Route path="/change-password" element={<PasswordChange />} />
             <Route path="/password/:id" element={<SetUpNewPassword />} />
+            <Route path="/oauth2/redirect" element={<OAuth2RedirectHandler />} />
           </Route>
           <Route element={<ProtectedRoutesUser />}>
             <Route path="/edit-profile" element={<EditUserProfile />} />
